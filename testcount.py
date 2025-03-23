@@ -245,6 +245,11 @@ while True:
     
     cv2.putText(frame,str(space),(23,30),cv2.FONT_HERSHEY_PLAIN,3,(255,255,255),2)
 
+    # Displaying the number of free and occupied spaces
+    cv2.putText(frame, f"Free Spaces: {space}", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+    cv2.putText(frame, f"Occupied Spaces: {o}", (50, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+
+
     cv2.imshow("RGB", frame)
 
     if cv2.waitKey(1)&0xFF==27:
